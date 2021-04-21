@@ -91,7 +91,7 @@ export default defineComponent({
     },
     isFirstLevel: {
       type: Boolean,
-      required: true
+      default: true
     },
     basePath: {
       type: String,
@@ -162,39 +162,19 @@ export default defineComponent({
 })
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .el-submenu.is-active > .el-submenu__title {
   color: $subMenuActiveText !important;
 }
 
 .full-mode {
-  .nest-menu .el-submenu > .el-submenu__title,
+  .nest-menu .el-submenu>.el-submenu__title,
   .el-submenu .el-menu-item {
     min-width: $sideBarWidth !important;
     background-color: $subMenuBg !important;
 
     &:hover {
       background-color: $subMenuHover !important;
-    }
-  }
-  .el-menu-item{
-    &>span{
-      display: inline-block;
-      padding-left: 5px;
-    }
-  }
-  .el-submenu {
-    overflow: hidden;
-
-    & > .el-submenu__title {
-      .el-submenu__icon-arrow {
-        display: none;
-      }
-
-      & > span {
-             padding-left: 5px;
-
-      }
     }
   }
 }

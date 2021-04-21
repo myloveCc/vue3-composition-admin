@@ -8,7 +8,7 @@
 <template>
   <section class="app-main">
     <transition
-      name="fade-transform"
+      name="fade"
       mode="out-in"
     >
       <keep-alive :include="cachedViews">

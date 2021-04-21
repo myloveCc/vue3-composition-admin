@@ -58,12 +58,11 @@ export default defineComponent({
   props: {
     todo: {
       type: Object as PropType<TodoItem>,
-      default: {
+      default: () => ({
         text: '',
         done: false
-      }
+      })
     }
-
   },
   emits: ['toggle-todo', 'edit-todo', 'delete-todo'],
   setup(props, { emit }) {

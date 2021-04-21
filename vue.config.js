@@ -30,11 +30,11 @@ module.exports = {
     hot: true,
     port: devPort,
     open: true,
-    noInfo: false,
     overlay: {
       warnings: true,
       errors: true,
     },
+    progress: false,
   },
   pluginOptions: {
     'style-resources-loader': {
